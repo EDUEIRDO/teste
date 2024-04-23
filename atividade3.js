@@ -24,13 +24,15 @@ console.log(verificador())
 function convert(a){
     return a * 2.6
 }
-
 console.log(convert(4))
 
 //Questão 4
 
 function imc(a, b){
     return a / (b *2);
-
 }
 console.log(imc(80, 180))
+
+//Questão 5
+
+console.log("AAAAAAAA".toLowerCase());
