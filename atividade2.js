@@ -10,27 +10,32 @@ while (i <= 20){
 
 function primeNumber(num) {
     var divisor = 2;
-    for (divisor < num; divisor++;){
+    for (; divisor < num; divisor++) {
         if (num % divisor == 0) return false;
-        return true;
     }
+    return true;
 }
+
 var numero = 100;
-for (var i = 2; i < numero; i++) if (primeNumber(i)) console.log(i);
+for (var i = 2; i < numero; i++) {
+    if (primeNumber(i)) console.log(i);
+}
 
 //Questão 3
 
 
 
-function teste(){
-    for(let mult = 5;mult <= 50; mult++){
-        console.log(mult);
-        for (let num = 1; num <=10; num++) {
+function teste() {
+    for (let mult = 5; mult <= 50; mult++) {
+        console.log(`Multiplication table for ${mult}:`);
+        for (let num = 1; num <= 10; num++) {
             let result = mult * num;
-            console.log(`${mult} x ${num} = ${result}`)
+            console.log(`${mult} x ${num} = ${result}`);
         }
+        console.log();
     }
 }
+
 
 //Questão 4
 

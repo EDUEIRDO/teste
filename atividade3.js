@@ -29,9 +29,9 @@ console.log(convert(4))
 //Questão 4
 
 function imc(a, b){
-    return a / (b *2);
+    return a / (b * b);
 }
-console.log(imc(80, 180))
+console.log(imc(80, 1.80))
 
 //Questão 5
 
