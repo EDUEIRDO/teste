@@ -26,8 +26,8 @@ for (var i = 2; i < numero; i++) {
 
 
 function teste() {
-    for (let mult = 5; mult <= 50; mult++) {
-        console.log(`Multiplication table for ${mult}:`);
+    for (let mult = 5; mult < 6; mult++) {
+        console.log(`Tabela ${mult}:`);
         for (let num = 1; num <= 10; num++) {
             let result = mult * num;
             console.log(`${mult} x ${num} = ${result}`);
@@ -36,6 +36,7 @@ function teste() {
     }
 }
 
+teste()
 
 //Questão 4
 
@@ -54,4 +55,3 @@ function multiplos(){
 }
 multiplosDeTres = multiplos();
 console.log(multiplosDeTres)
-

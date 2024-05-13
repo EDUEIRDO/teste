@@ -22,7 +22,7 @@ console.log(verificador())
 //Questão 3
 
 function convert(a){
-    return a * 2.6
+    return a * 2.6  
 }
 console.log(convert(4))
 
