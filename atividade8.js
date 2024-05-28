@@ -42,13 +42,24 @@ class Estudante {
     }
 
     calcularMedia() {
-        let soma = this.notas.reduce((acc, nota) => acc + nota, 0);
-        return soma / this.notas.length;
+        let soma = this.notas.reduce((total, nota) => total + nota, 0);
+        let media = soma / this.notas.length;
+        return media;
     }
 }
 
-const estudante1 = new Estudante('Alice', [90, 85, 88, 92]);
-const estudante2 = new Estudante('Bob', [78, 82, 80, 76]);
+let estudante1 = new Estudante('Alice', [90, 85, 88, 92]);
+let estudante2 = new Estudante('Bob', [78, 82, 80, 76]);
 
-console.log(`${estudante1.nome} tem média: ${estudante1.calcularMedia()}`);
-console.log(`${estudante2.nome} tem média: ${estudante2.calcularMedia()}`);
+console.log(`${estudante1.nome} tem média: ${estudante1.calcularMedia().toFixed(2)}`);
+console.log(`${estudante2.nome} tem média: ${estudante2.calcularMedia().toFixed(2)}`);
+
+//Questão 4
+
+class Utilitario {
+    constructor(tempCel, fah) {
+        this.tempCel = tempCel;
+        this.fah = fah; 
+    }
+    
+}
