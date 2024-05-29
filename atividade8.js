@@ -40,26 +40,55 @@ class Estudante {
         this.nome = nome;
         this.notas = notas;
     }
-
-    calcularMedia() {
-        let soma = this.notas.reduce((total, nota) => total + nota, 0);
-        let media = soma / this.notas.length;
-        return media;
+    calculo() {
+        var soma = 0;
+        for(var i =0;i<this.notas.length;i++){
+        soma+=this.notas[i];
+        }
+        return soma / 2
     }
 }
-
 let estudante1 = new Estudante('Alice', [90, 85, 88, 92]);
-let estudante2 = new Estudante('Bob', [78, 82, 80, 76]);
 
-console.log(`${estudante1.nome} tem média: ${estudante1.calcularMedia().toFixed(2)}`);
-console.log(`${estudante2.nome} tem média: ${estudante2.calcularMedia().toFixed(2)}`);
+console.log(`Aluna ${estudante1.nome} e sua media foi ${estudante1.calculo()}`);
 
 //Questão 4
 
 class Utilitario {
-    constructor(tempCel, fah) {
-        this.tempCel = tempCel;
-        this.fah = fah; 
+    constructor(celsius){
+        this.celsius = celsius;
     }
-    
+    soma(){
+        let resultado = this.celsius * 1.8 + 32;
+        return resultado
+    }
 }
+let convert = new Utilitario(25);
+console.log(`A temperatura está em ${convert.soma()}`);
+
+//Questão 5
+
+class Jogo{
+    constructor(entrada, numale){
+        this.entrada = entrada;
+        this.numale = numale;
+    }
+    static numAll(){
+        let numale = Math.floor(Math.random(0, 1));
+        return numale
+    }
+    logica(){
+        if (this.entrada == this.numale) {
+            console.log("Acertou");
+        }
+        else if (this.entrada != this.numale){
+            console.log("Errou");
+        }
+    }
+}
+
+let entrada = new Jogo(1);
+console.log(entrada.logica());
+
+//Questão 6
+
